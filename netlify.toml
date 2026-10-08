@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# The ticket links use browser history (for example /ticket/<token>).
+# This rewrite lets a refresh of any such link load the React app instead of
+# returning a hosting-provider 404 page.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
